@@ -1,0 +1,61 @@
+<html>
+<head>
+<meta chaset="utf-8"/>
+ <script src="https://cdn.resources.cdstm.cn/site/js/jquery.min.js"></script>
+ <style>
+
+    #search_mask {       
+            position: absolute; top: 0; filter: alpha(opacity=60); background-color: #eee;     
+            z-index: 1002; left: 0px;     
+            opacity:0.5; -moz-opacity:0.5;     
+        } 
+</style>
+</head>
+<body>
+
+<div id="search_mask" class=""></div>    
+<a href="javascript:;" onclick="showMask()">点我显示遮罩层</a><br /> 
+<div style="height:1200px">
+hello
+</div>
+<div style="height:1200px">
+hello
+</div>
+<script type="text/javascript">
+
+	//兼容火狐、IE8   
+    //显示遮罩层    
+    function showMask(){     
+	    var h = window.innerHeight;
+		var w = window.innerWidth;
+        $("#search_mask").css("height",h);     
+        $("#search_mask").css("width",w);     
+        $("#search_mask").show();  
+		document.getElementsByTagName('body')[0].style.height = window.innerHeight-55+'px'; 
+		document.getElementsByTagName('body')[0].style.overflow = 'hidden';
+    }  
+    //隐藏遮罩层  
+    function hideMask(event){            
+		$("#search_mask").hide();   
+		document.getElementsByTagName('body')[0].style.height = 'auto';
+		document.getElementsByTagName('body')[0].style.overflow = 'auto';
+			
+    }  
+	
+	$('#search_mask').click(function(ev){
+		ev.stopPropagation();
+		hideMask();
+	});
+	
+	$(document).keydown(function(e){
+			if(e.keyCode=="27"){
+				hideMask();
+			}
+	});
+
+
+</script>
+
+
+</body>
+</html>
