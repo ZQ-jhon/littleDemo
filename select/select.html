@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<script src="js/data.js"></script>
+	<title>我是精明的小卖家</title>
+</head>
+<body>
+	<select name="select" id="regionSelector" draggable="true">
+	<option value="-1" selected="selected">请选择地区</option>
+	<option value="0">华东地区</option>
+	<option value="1">华北地区</option>
+	<option value="2">华南地区</option>
+</select>
+<select name="select" id="productSelector" draggable="true">
+	<option value="-1" selected="selected">请选择货品种类</option>
+	<option value="0">手机</option>
+	<option value="1">笔记本</option>
+	<option value="2">智能音箱</option>
+</select>
+<h2 id="title">请在左上角选择地区和商品</h2>
+	<table id="table"  cellpadding="15">
+		<thead>
+			<tr id="thead">
+				<td>地区</td>
+				<td>商品</td>
+				<td>1月</td><td>2月</td><td>3月</td><td>4月</td><td>5月</td><td>6月</td><td>7月</td><td>8月</td><td>9月</td><td>10月</td><td>11月</td><td>12月</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr id="renderBox">
+				<td id="diqu">地区</td>
+				<td id="shangpin">商品</td>
+			</tr>
+		</tbody>
+	</table>
+	<footer>
+		@ZQ-jhon 
+		<a href="https://github.com/ZQ-jhon/littleDemo">view source code</a>
+		M.I.T
+	</footer>
+	
+	<script src="js/select.js"></script>
+</body>
+</html>
